@@ -1,0 +1,176 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Adjust the height as needed */
+    background: url('../../assets/HeroImage.jpg') no-repeat center center/cover; /* Background image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
+    position: relative;
+    z-index: 2; /* Ensure content is above any other elements */
+    padding: 20px;
+    
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+    z-index: 1; /* Ensure overlay is above the background but below the content */
+  }
+ 
+  
+  .hero .bold {
+   font-size: 40px;
+   font-weight: 700;
+   font-family: 'Poppins', sans-serif;
+   
+  }
+
+  .hero-content:nth-child(1){
+    font-size:24px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+
+  #liz{
+    font-size:24px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 4vh;
+  }
+
+  
+  .btn{
+    width:200px;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 1vh 0.5vw;
+    font-size:24px;
+    font-weight: 700;
+    font-weight:'Montserrat', sans-serif; ;
+    margin: 1vw;
+    position: relative;
+    z-index: 2;
+    cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+  .org-btn:hover{
+    background-color: darkorange;
+  }
+ 
+  .org-btn{
+     color: white;
+     background-color: rgba(250, 74, 12, 1);
+     ;
+  }
+  .wht-btn{
+    background: none;
+    color: white;
+    border-color: white;
+  }
+.wht-btn:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.box{
+    position: relative;
+    width:100%;
+    height: 140vh;
+}
+
+.img-container{
+    position: absolute;
+    margin: auto;
+    width: 500px;
+    height: 60vh;
+    left:50%;
+    translate: -50% -13vh;
+    
+}
+
+.img-container img{
+    position: absolute;
+    height: auto;
+    width: 400px;
+    
+}
+
+.img-container img:first-child {
+    top: 0;
+    left: 0;
+    z-index:3; 
+}
+
+.img-container img:last-child {
+    top: 50px; /* Adjust the vertical position as needed */
+    left: 135px; /* Adjust the horizontal position as needed */
+    z-index:2; /* Place it behind the first image */
+  }
+
+.boundary{
+    width: 70vw;
+    margin: auto;
+    /* background-color: black;
+    height: 5px; */
+    border: 3px solid rgba(228, 228, 228, 1)
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+@media (max-width:600px){
+   
+    .hero::before{
+       background-color: white;
+    }
+    .hero-content{
+        color: black;
+    }
+    .bold{
+        display: inline;
+    }
+    .centre-area{
+        display: flex;
+        flex-direction: column;
+    }
+    .wht-btn{
+        background-color: white;
+        color: rgba(250, 74, 12, 1);
+        border: 2px solid rgba(250, 74, 12, 1) ;
+    }
+    .img-container{
+        width: 100vw;
+    }
+    .img-container img{
+        width: 70vw;
+    }
+    .img-container img:first-child{
+        top: 10vh;
+    }
+    .img-container img:last-child{
+        top: 15vh;
+        left:22vw;
+    }
+    .box{
+        height: 120vh;
+    }
+}
